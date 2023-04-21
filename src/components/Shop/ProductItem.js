@@ -1,10 +1,10 @@
+import { useDispatch } from 'react-redux';
+
+import { cartActions } from '../../store/cart-slice';
 import Card from '../UI/Card';
 import classes from './ProductItem.module.css';
-import { useDispatch } from 'react-redux';
-import { cartActions } from '../../store/cart-slice';
 
 const ProductItem = (props) => {
-
   const dispatch = useDispatch();
 
   const { title, price, description, id } = props;
@@ -15,7 +15,6 @@ const ProductItem = (props) => {
         id,
         title,
         price,
-
       })
     );
   };
